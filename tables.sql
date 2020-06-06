@@ -78,9 +78,7 @@ CREATE TABLE Shift (
 CREATE TABLE Reservation (
   id               int(10) UNSIGNED NOT NULL AUTO_INCREMENT, 
   idShift          int(10) UNSIGNED NOT NULL, 
-  idUser           int(10) UNSIGNED NOT NULL, 
-  reservationTime  nvarchar(8) NOT NULL comment 'formato HH:mm:ss', 
-  reservationDate  nvarchar(10) NOT NULL comment 'formato aaaa-mm-dd', 
+  idUser           int(10) UNSIGNED NOT NULL,
   state            nvarchar(10) NOT NULL comment 'Si está pendiente, confirmada o rechazada', 
   status           bit NOT NULL, 
   registeredTime   datetime NOT NULL, 
@@ -110,9 +108,7 @@ CREATE TABLE Facility (
   INDEX (status))  engine=InnoDB;
 CREATE TABLE Confirmation (
   id               	int(10) UNSIGNED NOT NULL AUTO_INCREMENT, 
-  idReservation    	int(10) UNSIGNED NOT NULL, 
-  confirmationTime 	nvarchar(8) NOT NULL, 
-  confirmationDate 	nvarchar(10) NOT NULL, 
+  idReservation    	int(10) UNSIGNED NOT NULL,
   state            	nvarchar(10) NOT NULL comment 'Este estado se hace para tener una persistencia ante una posible baja de una reserva ya confirmada por el propietario.', 
   status           	bit NOT NULL, 
   registeredTime   	datetime NOT NULL, 
