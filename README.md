@@ -17,8 +17,7 @@
 - [A NIVEL DE CAMPOS](#a-nivel-de-campos)
 - [A NIVEL DE TIPOS DE DATOS](#a-nivel-de-tipos-de-datos)
 - [SEGURIDAD](#seguridad)
-- [FUNCIONALIDAD](#funcionalidad)
-- [Acknowledgments](#acknowledgement)
+- [FUNCIONALIDAD](#funcionalidad)s
 
 ## 🧐 A NIVEL DE BASE DE DATOS <a name = "a-nivel-base-de-datos"></a>
 
