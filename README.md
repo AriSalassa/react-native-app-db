@@ -1,28 +1,16 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://banner2.cleanpng.com/20180610/sks/kisspng-mysql-database-server-microsoft-sql-server-5b1d8657d3e489.9771192415286615918679.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://www.dcorba.com/wp-content/uploads/2017/11/mysql-logo.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">DB MySQL server</h3>
 
-<div align="center">
-
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
-
----
-
-<p align="center"> Few lines describing your project.
-    <br> 
+<p align="center"> Scripts para generar la base de datos, para insertar algunos datos de prueba y para agergar store procedures o patches si fuera necesario.
 </p>
 
-## 📝 Table of Contents
+## 📝 Diseño de nuestra base de datos.
 
-- [About](#about)
+- [A NIVEL DE BASE DE DATOS](#a-nivel-base-de-datos)
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Usage](#usage)
@@ -32,9 +20,9 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+## 🧐 A NIVEL DE BASE DE DATOS <a name = "a-nivel-base-de-datos"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Buenas prácticas para el diseño de base de datos
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
