@@ -39,7 +39,7 @@
 - El nombre de los campos/columnas deben ser en singular.
 - El PK de todas las tablas debe de ser un entero (INT o BIGINT), único, autoincremental, indexado y será ascendente.
 - El nombre del PK empieza será 'id'.
-- Los FK, deben ser un entero (INT o BIGINT), indexados, y con la misma sgte. nomenclatura: ‘FK_ID_NOMBRE_DE_LA_TABLA’, ‘FK_ID_APELLIDO_PATERNO’, ‘ID_CONTACTO_TELEFONO_TABLA1_TABLA2′.
+- Los FK, deben ser un entero (INT o BIGINT), indexados, y con la sgte. nomenclatura: ‘FK_ID_NOMBRE_DE_LA_TABLA’, ‘FK_ID_APELLIDO_PATERNO’, ‘ID_CONTACTO_TELEFONO_TABLA1_TABLA2′.
 - El nombre de los campos deben de ser en CamelCase, empiezar en minúsculas, no tener espacios o guiones bajos.
 - Evitar usar ‘NULL’.
 - Todos los campos status deben estar indexados.
