@@ -142,14 +142,12 @@ CREATE TABLE Image (
   id             int(10) NOT NULL AUTO_INCREMENT, 
   url            varchar(255) NOT NULL UNIQUE, 
   alt            varchar(50), 
-  idFacility     int(10) NOT NULL, 
   status         tinyint(1) NOT NULL, 
   registeredTime datetime NOT NULL, 
   retiredTime    datetime NULL, 
   moficationTime datetime NOT NULL, 
   PRIMARY KEY (id), 
   UNIQUE INDEX (id), 
-  INDEX (idFacility), 
   INDEX (status)) type=InnoDB;
 CREATE TABLE Province (
   id               int(2) NOT NULL AUTO_INCREMENT, 
@@ -345,6 +343,19 @@ CREATE TABLE Message (
   INDEX (idRoomMember), 
   INDEX (idRoom), 
   INDEX (status)) type=InnoDB;
+CREATE TABLE FacilityImage (
+  id               int(10) NOT NULL, 
+  idImage          int(10) NOT NULL, 
+  idFacility       int(10) NOT NULL, 
+  status           tinyint(1) NOT NULL, 
+  registeredTime   datetime NOT NULL, 
+  retiredTime      datetime NULL, 
+  modificationTime datetime NOT NULL, 
+  PRIMARY KEY (id), 
+  UNIQUE INDEX (id), 
+  INDEX (idImage), 
+  INDEX (idFacility), 
+  INDEX (status)) type=InnoDB;
 ALTER TABLE `User` ADD CONSTRAINT FKUser156294 FOREIGN KEY (idLocation) REFERENCES Location (id);
 ALTER TABLE Field ADD CONSTRAINT FKField127677 FOREIGN KEY (idType) REFERENCES FieldType (id);
 ALTER TABLE Field ADD CONSTRAINT FKField500073 FOREIGN KEY (idFacility) REFERENCES Facility (id);
@@ -359,7 +370,6 @@ ALTER TABLE ZonaDepartmentoPartido ADD CONSTRAINT FKZonaDepart352927 FOREIGN KEY
 ALTER TABLE `User` ADD CONSTRAINT FKUser256501 FOREIGN KEY (idZonaDepartamentoPartido) REFERENCES ZonaDepartmentoPartido (id);
 ALTER TABLE Facility ADD CONSTRAINT FKFacility599814 FOREIGN KEY (idZonaDepartamentoPartido) REFERENCES ZonaDepartmentoPartido (id);
 ALTER TABLE `User` ADD CONSTRAINT FKUser771439 FOREIGN KEY (profileImage) REFERENCES Image (id);
-ALTER TABLE Image ADD CONSTRAINT FKImage385805 FOREIGN KEY (idFacility) REFERENCES Facility (id);
 ALTER TABLE Shift ADD CONSTRAINT FKShift130983 FOREIGN KEY (idField) REFERENCES Field (id);
 ALTER TABLE AdmissionRequest ADD CONSTRAINT FKAdmissionR782465 FOREIGN KEY (idUser) REFERENCES `User` (id);
 ALTER TABLE AdmissionRequest ADD CONSTRAINT FKAdmissionR669097 FOREIGN KEY (idCommunity) REFERENCES Community (id);
@@ -380,3 +390,5 @@ ALTER TABLE RoomMember ADD CONSTRAINT FKRoomMember659016 FOREIGN KEY (idUser) RE
 ALTER TABLE RoomMember ADD CONSTRAINT FKRoomMember473192 FOREIGN KEY (idRoom) REFERENCES Room (id);
 ALTER TABLE Message ADD CONSTRAINT FKMessage755044 FOREIGN KEY (idRoomMember) REFERENCES RoomMember (id);
 ALTER TABLE Message ADD CONSTRAINT FKMessage134951 FOREIGN KEY (idRoom) REFERENCES Room (id);
+ALTER TABLE FacilityImage ADD CONSTRAINT FKFacilityIm225656 FOREIGN KEY (idImage) REFERENCES Image (id);
+ALTER TABLE FacilityImage ADD CONSTRAINT FKFacilityIm802950 FOREIGN KEY (idFacility) REFERENCES Facility (id);
