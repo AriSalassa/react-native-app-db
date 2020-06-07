@@ -21,8 +21,8 @@ CREATE TABLE UsersTable (
   INDEX (status)) engine=InnoDB;
 CREATE TABLE Location (
   id               int(10) UNSIGNED NOT NULL AUTO_INCREMENT, 
-  latitude         nvarchar(255) NOT NULL, 
-  longitude        nvarchar(255) NOT NULL, 
+  latitude         Decimal(9,6) NOT NULL, 
+  longitude        Decimal(9,6) NOT NULL, 
   status           bit NOT NULL, 
   registeredTime   datetime NOT NULL, 
   retiredTime      datetime NULL, 
