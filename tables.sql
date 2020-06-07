@@ -147,7 +147,7 @@ CREATE TABLE Image (
   INDEX (status))  engine=InnoDB;
 CREATE TABLE Province (
   id               int(10) UNSIGNED NOT NULL AUTO_INCREMENT, 
-  name             nvarchar(10) NOT NULL UNIQUE, 
+  name             nvarchar(50) NOT NULL UNIQUE, 
   status           bit NOT NULL, 
   registeredTime   datetime NOT NULL, 
   retiredTime      datetime NULL, 
@@ -158,7 +158,7 @@ CREATE TABLE Province (
 CREATE TABLE ProvinceZone (
   id               int(10) UNSIGNED NOT NULL AUTO_INCREMENT, 
   idProvince       int(10) UNSIGNED NOT NULL, 
-  name             nvarchar(255) NOT NULL, 
+  name             nvarchar(50) NOT NULL, 
   status           bit NOT NULL, 
   registeredTime   datetime NOT NULL, 
   retiredTime      datetime NULL, 
